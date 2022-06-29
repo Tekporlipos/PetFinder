@@ -42,7 +42,7 @@
     "application/json"
 ],
     "paths": {
-    "/api/v2/organisation/{key}": {
+    "/api/v2/organizations/{key}": {
         "get": {
             "tags": [
                 "Organisations"
