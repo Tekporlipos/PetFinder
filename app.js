@@ -19,6 +19,54 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+var
+    bodyParser = require("body-parser"),
+    swaggerJsdoc = require("swagger-jsdoc"),
+    swaggerUi = require("swagger-ui-express");
+
+const options = {
+  definition: {
+    openapi: "3.0.0",
+    info: {
+      title: "PetFinder Montech Test",
+      version: "0.1.0",
+      description:
+          "PetFnder Widget - Take the data from the petFinder API and provide eihte a service or script that allows other site owners to insert into their websites.https://www.petfinder.com/developers/v2/docs" +
+          "\n\nTest Criteria\n1. Design your schema properly for nosql or proper relationships for SQL database implementation.\n2. Write a unit test for all service and controllers\n3. Document your API using postman or Swagger\n4. Host it on live link when done, push the code to Github ",
+      license: {
+        name: "MIT",
+        url: "https://spdx.org/licenses/MIT.html",
+      },
+      repository:{
+        name: "GitHub",
+        url:"https://github.com/Tekporlipos/PetFinder"
+      },
+      contact: {
+        name: "PetFinder",
+        url: "https://montech-petfinder.herokuapp.com/",
+        email: "dizikunujohn36@gmail.com",
+      },
+    },
+    servers: [
+      {
+        name:"Endpont",
+        url: "http://localhost:3000/api/v2/",
+      },
+    ],
+  },
+  apis: ["./routes/api_moduler.js"],
+};
+
+const specs = swaggerJsdoc(options);
+app.use(
+    "/documentation",
+    swaggerUi.serve,
+    swaggerUi.setup(specs, { explorer: true })
+);
+
+
+
 app.use('/', indexRouter);
 app.use('/api/v2/', ControllerRouter);
 
