@@ -15,8 +15,7 @@
         }
     },
 
-    "host": "https://montech-petfinder.herokuapp.com",
-    "basePath": "/api/v2/",
+    "host": "montech-petfinder.herokuapp.com",
     "tags": [
     {
         "name": "Animals",
@@ -32,9 +31,7 @@
             "description": "API for Users in the system"
         }
 ],
-    "schemes": [
-    "https://montech-petfinder.herokuapp.com"
-],
+   
     "consumes": [
     "application/json"
 ],
