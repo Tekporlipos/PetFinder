@@ -1,0 +1,1 @@
+const {addData,geData,getDataById,getDataByOrganisation} = require("../../module/localDatabase")
