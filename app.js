@@ -18,6 +18,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 
@@ -26,11 +27,10 @@ const swaggerUi = require('swagger-ui-express'),
 
 app.use('/documentation', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-
-
 app.use('/', indexRouter);
+app.use('/admin', admin);
 app.use('/api/v2/', ControllerRouter);
-app.use('admin', admin);
+
 
 
 

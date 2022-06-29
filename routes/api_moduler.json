@@ -33,7 +33,7 @@
         }
 ],
     "schemes": [
-    "https://montech-petfinder.herokuapp.com/api/v2/"
+    "https://montech-petfinder.herokuapp.com"
 ],
     "consumes": [
     "application/json"
@@ -42,7 +42,7 @@
     "application/json"
 ],
     "paths": {
-    "organisation/{key}": {
+    "/api/v2/organisation/{key}": {
         "get": {
             "tags": [
                 "Organisations"
@@ -72,7 +72,7 @@
         }
     },
 
-     "organisation/{id}/{key}": {
+     "/api/v2/organisation/{id}/{key}": {
         "get": {
             "tags": [
                 "Organisations"
@@ -102,7 +102,7 @@
         }
     },
 
-     "/types/{key}": {
+     "/api/v2/types/{key}": {
         "get": {
             "tags": [
                 "Types"
@@ -132,7 +132,7 @@
         }
     },
 
-     "/types/{id}/{key}": {
+     "/api/v2/types/{id}/{key}": {
         "get": {
             "tags": [
                 "Types"
@@ -169,7 +169,7 @@
             }
         }
     },
-     "/types/{id}/breeds/{key}": {
+     "/api/v2/types/{id}/breeds/{key}": {
         "get": {
             "tags": [
                 "Types"
@@ -206,7 +206,7 @@
             }
         }
     },
-     "/{key}": {
+     "/api/v2/{key}": {
         "get": {
             "tags": [
                 "Animals"
@@ -235,7 +235,7 @@
             }
         }
     },
-     "animals/{id}/{key}": {
+     "/api/v2/animals/{id}/{key}": {
         "get": {
             "tags": [
                 "Animals"

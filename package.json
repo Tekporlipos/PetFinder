@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "nodemon ./bin/www"
+    "dev": "nodemon ./bin/www",
+    "test": "jest --watchAll"
   },
   "dependencies": {
     "axios": "^0.27.2",
@@ -13,8 +14,10 @@
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
+    "jest": "^28.1.2",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.18",
+    "supertest": "^6.2.3",
     "swagger-jsdoc": "^6.2.1",
     "swagger-ui-express": "^4.4.0",
     "uuid": "^8.3.2"
