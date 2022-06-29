@@ -6,35 +6,35 @@ class DataBase {
         this.key = key;
         this.date = date;
     }
-    _getName(){
+    getName(){
         return this.name;
     }
-    _getOragnisation(){
+    getOragnisation(){
         return this.name;
     }
-    _getLocation(){
+    getLocation(){
         return this.name;
     }
-    _getKey(){
+    getKey(){
         return this.name;
     }
-    _getDate(){
+    getDate(){
         return this.name;
     }
 
-    _setName(name){
+    setName(name){
         this.name = name;
     }
-    _setOragnisation(oragnisation){
+    setOragnisation(oragnisation){
         this.oragnisation = oragnisation;
     }
-    _setLocation(location){
+    setLocation(location){
         this.location = location;
     }
-    _setKey(key){
+    setKey(key){
         this.name = key;
     }
-    _setDate(date){
+    setDate(date){
         this.date = date;
     }
 

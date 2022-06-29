@@ -3,7 +3,7 @@
     "info": {
     "version": "1.0.0",
         "title": "PetFnder Widget",
-        "description": "PetFnder Widget - Take the data from the petFinder API and provide eihte a service or script that allows other site owners to insert into their websites.https://www.petfinder.com/developers/v2/docs \n\nTest Criteria\n1. Design your schema properly for nosql or proper relationships for SQL database implementation.\n2. Write a unit test for all service and controllers\n3. Document your API using postman or Swagger\n4. Host it on live link when done, push the code to Github \n\n\n\n Get acess key from https://montech-petfinder.herokuapp.com/#key",
+        "description": "PetFnder Widget - Take the data from the petFinder API and provide either a service or script that allows other site owners to insert into their websites.https://www.petfinder.com/developers/v2/docs \n\nTest Criteria\n1. Design your schema properly for nosql or proper relationships for SQL database implementation.\n2. Write a unit test for all service and controllers\n3. Document your API using postman or Swagger\n4. Host it on live link when done, push the code to Github \n\n\n\n Get acess key from https://montech-petfinder.herokuapp.com/#key",
         "license": {
         "name": "MIT",
             "url": "https://opensource.org/licenses/MIT"

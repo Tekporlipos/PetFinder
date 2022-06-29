@@ -18,10 +18,12 @@ function geData() {
 }
 
 function getDataByKey(key) {
-    let datavalue = {};
+    let datavalue = null;
     localDatabase.forEach(data=>{
-        if(data._getKey == key){}
-        datavalue = data;
+        if(data.key == key){
+            datavalue = data;
+        }
+
     })
    return  datavalue;
 }
