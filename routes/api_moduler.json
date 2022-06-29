@@ -1,0 +1,354 @@
+{
+    "swagger": "2.0",
+    "info": {
+    "version": "1.0.0",
+        "title": "PetFnder Widget",
+        "description": "PetFnder Widget - Take the data from the petFinder API and provide eihte a service or script that allows other site owners to insert into their websites.https://www.petfinder.com/developers/v2/docs \n\nTest Criteria\n1. Design your schema properly for nosql or proper relationships for SQL database implementation.\n2. Write a unit test for all service and controllers\n3. Document your API using postman or Swagger\n4. Host it on live link when done, push the code to Github ",
+        "license": {
+        "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+    },
+        "contact": {
+            "name": "PetFinder",
+            "url": "https://montech-petfinder.herokuapp.com/",
+            "email": "dizikunujohn36@gmail.com"
+        }
+    },
+
+    "host": "localhost:3000",
+    "basePath": "/api/v2/",
+    "tags": [
+    {
+        "name": "Animals",
+        "description": "API for Animals in the system"
+    }
+],
+    "schemes": [
+    "localhost:3000/api/v2/"
+],
+    "consumes": [
+    "application/json"
+],
+    "produces": [
+    "application/json"
+],
+    "paths": {
+    "organisation/{key}": {
+        "get": {
+            "tags": [
+                "Organisations"
+            ],
+                "description": "Returns details on a group of organizations based on criteria given in parameters.",
+                "parameters": [
+                {
+                    "name": "Organisations",
+                    "in": "body",
+                    "description": "Animals that we want to create",
+                    "schema": {
+                        "$ref": "#/definitions/organisation"
+                    }
+                }
+            ],
+                "produces": [
+                "application/json"
+            ],
+                "responses": {
+                "200": {
+                    "description": "New animal is created",
+                        "schema": {
+                        "$ref": "#/definitions/Animal"
+                    }
+                }
+            }
+        }
+    },
+
+     "organisation/{id}/{key}": {
+        "get": {
+            "tags": [
+                "Organisations"
+            ],
+                "description": "Returns details on a single organization based on ID.",
+                "parameters": [
+                {
+                    "name": "Organisation",
+                    "in": "body",
+                    "description": "Animals that we want to create",
+                    "schema": {
+                        "$ref": "#/definitions/organisation"
+                    }
+                }
+            ],
+                "produces": [
+                "application/json"
+            ],
+                "responses": {
+                "200": {
+                    "description": "New animal is created",
+                        "schema": {
+                        "$ref": "#/definitions/Animal"
+                    }
+                }
+            }
+        }
+    },
+
+     "/types/{key}": {
+        "get": {
+            "tags": [
+                "Types"
+            ],
+                "description": "Returns an array of animal types. This provides the possible values for the \"type\" parameter, covering species, color, coat, and gender.",
+                "parameters": [
+                {
+                    "name": "Types",
+                    "in": "body",
+                    "description": "Returns an array of animal types.",
+                    "schema": {
+                        "$ref": "#/definitions/organisation"
+                    }
+                }
+            ],
+                "produces": [
+                "application/json"
+            ],
+                "responses": {
+                "200": {
+                    "description": "Animal by type",
+                        "schema": {
+                        "$ref": "#/definitions/Animal"
+                    }
+                }
+            }
+        }
+    },
+
+     "/types/{id}/{key}": {
+        "get": {
+            "tags": [
+                "Types"
+            ],
+                "description": "Returns an array of animal types. This provides the possible values for the \"type\" parameter, covering species, color, coat, and gender.",
+                "parameters": [
+                {
+                    "name": "keys",
+                    "in": "body",
+                    "description": "Returns an array of animal types.",
+                    "schema": {
+                        "$ref": "#/definitions/organisation"
+                    }
+                },
+                {
+                    "name": "id",
+                    "in": "body",
+                    "description": "ID of the type",
+                    "schema": {
+                        "$ref": "#/definitions/organisation"
+                    }
+                }
+            ],
+                "produces": [
+                "application/json"
+            ],
+                "responses": {
+                "200": {
+                    "description": "Animal by type",
+                        "schema": {
+                        "$ref": "#/definitions/Animal"
+                    }
+                }
+            }
+        }
+    },
+     "/types/{id}/breeds/{key}": {
+        "get": {
+            "tags": [
+                "Types"
+            ],
+                "description": "Returns an array of animal types. This provides the possible values for the \"type\" parameter, covering species, color, coat, and gender.",
+                "parameters": [
+                {
+                    "name": "keys",
+                    "in": "body",
+                    "description": "Returns an array of animal types.",
+                    "schema": {
+                        "$ref": "#/definitions/organisation"
+                    }
+                },
+                {
+                    "name": "id",
+                    "in": "body",
+                    "description": "ID of the type",
+                    "schema": {
+                        "$ref": "#/definitions/organisation"
+                    }
+                }
+            ],
+                "produces": [
+                "application/json"
+            ],
+                "responses": {
+                "200": {
+                    "description": "Animal by type",
+                        "schema": {
+                        "$ref": "#/definitions/Animal"
+                    }
+                }
+            }
+        }
+    },
+     "/{key}": {
+        "get": {
+            "tags": [
+                "Animals"
+            ],
+                "description": "Returns one \"page\" of details (defaulting to the first 20 results) on a group of animals based on criteria given in the parameters.",
+                "parameters": [
+                {
+                    "name": "keys",
+                    "in": "body",
+                    "description": "Returns an array of animal types.",
+                    "schema": {
+                        "$ref": "#/definitions/organisation"
+                    }
+                }
+            ],
+                "produces": [
+                "application/json"
+            ],
+                "responses": {
+                "200": {
+                    "description": "Animal by type and organisation",
+                        "schema": {
+                        "$ref": "#/definitions/Animal"
+                    }
+                }
+            }
+        }
+    },
+     "animals/{id}/{key}": {
+        "get": {
+            "tags": [
+                "Animals"
+            ],
+                "description": "Returns details on the specified animal based on ID.",
+                "parameters": [
+                {
+                    "name": "keys",
+                    "in": "body",
+                    "description": "Returns an array of animal types.",
+                    "schema": {
+                        "$ref": "#/definitions/organisation"
+                    }
+                },
+                {
+                    "name": "id",
+                    "in": "body",
+                    "description": "ID of the Animals",
+                    "schema": {
+                        "$ref": "#/definitions/organisation"
+                    }
+                }
+            ],
+                "produces": [
+                "application/json"
+            ],
+                "responses": {
+                "200": {
+                    "description": "Animal by type and organisation",
+                        "schema": {
+                        "$ref": "#/definitions/Animal"
+                    }
+                }
+            }
+        }
+    }
+
+},
+    "definitions": {
+    "Animal": {
+        "required": [
+            "name",
+            "_id",
+            "companies"
+        ],
+            "properties": {
+            "_id": {
+                "type": "integer",
+                    "uniqueItems": true
+            },
+            "isPublic": {
+                "type": "boolean"
+            },
+            "name": {
+                "type": "string"
+            },
+            "animals": {
+                "type": "array",
+                    "items": {
+                    "type": "object",
+                        "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "amount": {
+                            "type": "number"
+                        }
+                    }
+                }
+
+            },
+            "organisation": {
+                "type": "array",
+                    "items": {
+                    "type": "string"
+                }
+
+            }
+
+        }
+    },
+    "updateAnimal": {
+        "required": [
+            "name",
+            "companies"
+        ],
+            "properties": {
+            "isPublic": {
+                "type": "boolean"
+            },
+            "name": {
+                "type": "string"
+            },
+            "animals": {
+                "type": "array",
+                    "items": {
+                    "type": "object",
+                        "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "amount": {
+                            "type": "number"
+                        }
+                    }
+                }
+
+            },
+            "organisations": {
+                "type": "array",
+                    "items": {
+                    "type": "string"
+                }
+
+            }
+
+        }
+    },
+    "Animals": {
+        "type": "array",
+            "$ref": "#/definitions/Animal"
+    }
+
+}
+}
