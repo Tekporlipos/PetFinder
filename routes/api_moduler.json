@@ -15,7 +15,7 @@
         }
     },
 
-    "host": "localhost:3000",
+    "host": "https://montech-petfinder.herokuapp.com",
     "basePath": "/api/v2/",
     "tags": [
     {
@@ -24,7 +24,7 @@
     }
 ],
     "schemes": [
-    "localhost:3000/api/v2/"
+    "https://montech-petfinder.herokuapp.com/api/v2/"
 ],
     "consumes": [
     "application/json"
@@ -308,7 +308,7 @@
 
         }
     },
-    "updateAnimal": {
+    "organisation": {
         "required": [
             "name",
             "companies"
@@ -347,7 +347,7 @@
     },
     "Animals": {
         "type": "array",
-            "$ref": "#/definitions/Animal"
+            "$ref": "#/definitions/animal"
     }
 
 }
