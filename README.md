@@ -1,5 +1,5 @@
 # PetFinder
-PetFnder Widget - Take the data from the petFinder API and provide eihte a service or script that allows other site owners to insert into their websites.https://www.petfinder.com/developers/v2/docs
+PetFnder Widget - Take the data from the petFinder API and provide eihte a service or script that allows other site owners to insert into their websites.https://www.petfinder.com/developers/v2/docs Project on https://montech-petfinder.herokuapp.com
           
           ## Test Criteria
           1. Design your schema properly for nosql or proper relationships for SQL database implementation.
@@ -8,6 +8,6 @@ PetFnder Widget - Take the data from the petFinder API and provide eihte a servi
           4. Host it on live link when done, push the code to Github
      
      
-    documentation on https://montech-petfinder.herokuapp.com/documentation/
+    
           
  
