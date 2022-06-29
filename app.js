@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var ControllerRouter = require('./routes/api/controllers/controler');
+const admin = require("./routes/admin/admin")
 
 var app = express();
 
@@ -29,6 +30,7 @@ app.use('/documentation', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use('/', indexRouter);
 app.use('/api/v2/', ControllerRouter);
+app.use('admin', admin);
 
 
 

@@ -21,7 +21,16 @@
     {
         "name": "Animals",
         "description": "API for Animals in the system"
-    }
+    },{
+            "name": "Organisations",
+            "description": "API for Animals Organisations in the system"
+        },{
+            "name": "Types",
+            "description": "API for Animals Types in the system"
+        },{
+            "name": "Users",
+            "description": "API for Users in the system"
+        }
 ],
     "schemes": [
     "https://montech-petfinder.herokuapp.com/api/v2/"
@@ -262,9 +271,75 @@
                 }
             }
         }
-    }
-
-},
+    },
+        "/admin/getUsers": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "description": "Returns one \"page\" of details (defaulting to the first 20 results) on a group of Users based on criteria given in the parameters.",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Users by type and organisation",
+                        "schema": {
+                            "$ref": "#/definitions/Animal"
+                        }
+                    }
+                }
+            }
+        },
+        "/admin/getUsers/keys": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "description": "Returns one \"page\" of details (defaulting to the first 20 results) on a group of Users based on criteria given in the parameters.",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Users by type and organisation",
+                        "schema": {
+                            "$ref": "#/definitions/Animal"
+                        }
+                    }
+                }
+            }
+        },
+        "/admin/getUsers/keys/:key": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "parameters": [
+                    {
+                        "name": "keys",
+                        "in": "body",
+                        "description": "Returns an array of Users types.",
+                        "schema": {
+                            "$ref": "#/definitions/organisation"
+                        }
+                    }
+                ],
+                "description": "Returns one \"page\" of details (defaulting to the first 20 results) on a group of Users based on criteria given in the parameters.",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Users by type and organisation",
+                        "schema": {
+                            "$ref": "#/definitions/Animal"
+                        }
+                    }
+                }
+            }
+        }
+    },
     "definitions": {
     "Animal": {
         "required": [

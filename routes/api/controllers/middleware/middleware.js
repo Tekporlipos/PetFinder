@@ -1,7 +1,7 @@
 const {getToken} = require("../../services/service");
 const  {getDataByKey} = require("../../module/localDatabase")
 var error = {
-    "type": "https://www.petfinder.com/developers/v2/docs/errors/ERR-00002/",
+    "type": "https://montech-petfinder.herokuapp.com/documentation/errors/ERR-00002/",
     "status": 505,
     "title": "Invalid Request",
     "detail": "The request contains invalid parameters.",
