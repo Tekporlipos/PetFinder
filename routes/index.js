@@ -25,7 +25,7 @@ router.get('/', function(req, res, next) {
   if(req.cookies.key == null){
     key = "Generate key now for free";
   }
-  res.render('index', { title: key });
+  res.render('index', { newKey: key });
 });
 
 router.post("/auth/api/key",(req,res)=>{
